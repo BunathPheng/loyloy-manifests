@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: loyloy
-          image: docker.io/phengbunath/loyloy:2
+          image: docker.io/phengbunath/loyloy:1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
