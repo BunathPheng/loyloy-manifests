@@ -1,0 +1,21 @@
+---
+# Source: helm for kubernetes/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: loyloy                  # Ingress name
+  labels:
+    app: loyloy
+spec:
+  ingressClassName: nginx   # Optional ingressClass
+  rules:
+    - host: "loyloy.smartops.space"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: loyloy               # Links to Service name dynamically
+                port:
+                  number: 8080  # Links to service port dynamically
